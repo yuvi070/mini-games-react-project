@@ -1,3 +1,7 @@
+import {Route, Switch} from 'react-router-dom'
+
+import Home from './component/Home'
+
 import './App.css'
 
 const emojisList = [
@@ -143,6 +147,10 @@ const cardsData = [
   },
 ]
 
-const App = () => <div>Hello World</div>
+const App = () => (
+  <Switch>
+    <Route exact path="/" component={Home} />
+  </Switch>
+)
 
 export default App
